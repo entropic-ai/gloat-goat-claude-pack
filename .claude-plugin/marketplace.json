@@ -1,0 +1,27 @@
+{
+  "name": "gloat-goat-marketplace",
+  "owner": {
+    "name": "entropic-ai"
+  },
+  "plugins": [
+    {
+      "name": "gloat-goat",
+      "source": {
+        "source": "github",
+        "repo": "entropic-ai/gloat-goat-claude-pack"
+      },
+      "description": "Parody plugin pack for Claude Code.",
+      "version": "0.1.0",
+      "author": {
+        "name": "entropic-ai"
+      },
+      "repository": "https://github.com/entropic-ai/gloat-goat-claude-pack",
+      "license": "MIT",
+      "keywords": [
+        "claude-code",
+        "parody",
+        "meme"
+      ]
+    }
+  ]
+}

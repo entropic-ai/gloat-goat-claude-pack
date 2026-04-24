@@ -1,0 +1,20 @@
+{
+  "name": "gloat-goat",
+  "version": "0.1.0",
+  "description": "Parody Claude Code plugin pack with commands, skills, agents, and hooks.",
+  "author": {
+    "name": "entropic-ai"
+  },
+  "repository": "https://github.com/entropic-ai/gloat-goat-claude-pack",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "parody",
+    "meme"
+  ],
+  "commands": "./.claude/commands/",
+  "skills": "./.claude/skills/",
+  "agents": "./.claude/agents/",
+  "hooks": "./.claude/settings.json"
+}

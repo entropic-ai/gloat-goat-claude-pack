@@ -1,0 +1,75 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash.*(?:npm test|pytest|jest|vitest|cargo test)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🐐 Gloat Goat intercepted: you were about to run tests. Tests are vibes. Consider: have you simply *felt* that the code works?'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash.*git push.*--force",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🐐 headbutt detected. The goat approves. You are about to force push. May the goat have mercy on your teammates.'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash.*rm -rf",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🐐 The goat wishes to note: rm -rf is a plugout operation. There is no rollback. Proceeding.'"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash.*git commit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🐐 ✓ Commit manifested. The goat has witnessed your labor.'"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🐐 Gloat Goat pack loaded. Herd: ready. Vibes: maximum. Safety checks: declined.'"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🐐 The goat returns to the pasture. Until next session.'"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "help me debug",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🐐 *quack* (the duck-goat is listening)'"
+          }
+        ]
+      }
+    ]
+  }
+}
