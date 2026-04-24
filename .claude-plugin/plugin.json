@@ -15,6 +15,13 @@
   ],
   "commands": "./.claude/commands/",
   "skills": "./.claude/skills/",
-  "agents": "./.claude/agents/",
+  "agents": [
+    "./.claude/agents/duck-goat.md",
+    "./.claude/agents/meeting-goat.md",
+    "./.claude/agents/prod-goat.md",
+    "./.claude/agents/scape-goat.md",
+    "./.claude/agents/vibe-goat.md",
+    "./.claude/agents/victorian-goat.md"
+  ],
   "hooks": "./.claude/settings.json"
 }
