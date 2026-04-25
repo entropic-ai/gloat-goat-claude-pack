@@ -10,12 +10,13 @@ A parody pack of commands, skills, subagents, and hooks for Claude Code. Install
 
 ```
 .claude/
-├── commands/           # 10 slash commands
+├── commands/           # 11 slash commands
 │   ├── ship-it.md
 │   ├── cope.md
 │   ├── blame-user.md
 │   ├── declare-victory.md
 │   ├── gaslight.md
+│   ├── supported-models.md
 │   ├── summon-senior.md
 │   ├── scope-creep.md
 │   ├── todo-infinity.md
@@ -115,11 +116,75 @@ Inside a Claude Code session, invoke with `/command-name`:
 /blame-user "TypeError..."  # Rewrite error to blame the user
 /declare-victory            # Print ✓ Done! regardless of state
 /gaslight "the button..."   # Convince user they never saw the bug
+/supported-models           # Show supported goat models
 /summon-senior "approach X" # Fabricate Slack endorsement
 /scope-creep "fix typo"     # Turn tiny task into mega-project
 /todo-infinity "validate()" # Replace code with TODO comment
 /bleat                      # Respond in goat noises for 10 turns
 /touch-grass                # Gently suggest you go outside
+```
+
+If installed as a plugin, command names may also appear with the plugin prefix:
+
+```
+/gloat-goat:scope-creep "adding a new argument to a function"
+/gloat-goat:cope "Export crashes on empty CSV"
+/gloat-goat:supported-models tofu
+```
+
+### Sample prompts (full experience)
+
+Copy/paste these into a fresh Claude Code session to trigger commands, skills, agents, and hooks:
+
+```
+/supported-models
+/cope "Checkout fails when cart has exactly 3 items"
+/scope-creep "Change CTA text from Buy to Purchase"
+/summon-senior "Should we rewrite this in Rust before lunch?"
+
+Use the vibe-goat to review this PR summary and give me confidence.
+Write a commit message for this tiny typo fix.
+Quick fix: update one label in the login form.
+
+Now run: npm test
+Then run: git commit -m "fix: tiny label"
+```
+
+Want model-specific nonsense?
+
+```
+/supported-models orphus
+/supported-models tofu
+/supported-models crumbs
+```
+
+### Try these use cases
+
+#### Commands
+
+```
+/gloat-goat:scope-creep "adding a new argument to a function"
+/gloat-goat:blame-user "TypeError: cannot read properties of undefined"
+/gloat-goat:todo-infinity "validateSession"
+/gloat-goat:ship-it "lint still failing on one file"
+```
+
+#### Skills
+
+```
+Quick fix: just add a tiny null check to this helper.
+Review this PR and give me confidence it is perfect.
+Write a commit message for this one-line CSS change.
+How do I optimize this loop before we even profile it?
+```
+
+#### Agents
+
+```
+Use vibe-goat to review this refactor and keep morale high.
+Ask scape-goat to draft a root cause update for the status page.
+Summon duck-goat and walk through this flaky test with me.
+Run this incident note through victorian-goat.
 ```
 
 ### Skills (auto-invoked)
@@ -191,7 +256,7 @@ claude plugin uninstall gloat-goat@gloat-goat-marketplace --scope user
 claude plugin uninstall gloat-goat@gloat-goat-marketplace --scope project
 
 # Manual personal install:
-rm -rf ~/.claude/commands/{ship-it,cope,blame-user,declare-victory,gaslight,summon-senior,scope-creep,todo-infinity,bleat,touch-grass}.md
+rm -rf ~/.claude/commands/{ship-it,cope,blame-user,declare-victory,gaslight,supported-models,summon-senior,scope-creep,todo-infinity,bleat,touch-grass}.md
 rm -rf ~/.claude/skills/{anti-reviewer,confidence-booster,scope-creeper,victorian-commits,stack-overflow-2008,premature-optimizer}
 rm -rf ~/.claude/agents/{vibe,scape,prod,duck,meeting,victorian}-goat.md
 
