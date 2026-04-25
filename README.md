@@ -319,7 +319,7 @@ Follow the official Claude Code docs for full frontmatter options: https://docs.
 
 ## Credits
 
-**entropic-ai, PHC** — Private Harm Corporation
+**Entropic AI, PHC** — Private Harm Corporation
 *Accelerating the heat death of your codebase since 2026, allegedly.*
 
 The companion standalone CLI tool (`gg`) is available at:
