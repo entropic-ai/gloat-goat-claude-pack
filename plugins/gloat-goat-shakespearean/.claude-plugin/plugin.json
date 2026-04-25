@@ -1,0 +1,24 @@
+{
+  "name": "gloat-goat-shakespearean",
+  "version": "0.2.0",
+  "description": "Shakespearean aesthetic expansion pack. Reframes engineering decisions as five-act drama — soliloquies, death scenes for deprecated code, a dramatic-actor for trade-offs, and a court-jester who tells you the obvious thing nobody else will.",
+  "author": {
+    "name": "ENTROP/C"
+  },
+  "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "parody",
+    "shakespearean",
+    "aesthetic-pack"
+  ],
+  "commands": "./.claude/commands/",
+  "skills": "./.claude/skills/",
+  "agents": [
+    "./.claude/agents/dramatic-actor.md",
+    "./.claude/agents/court-jester.md"
+  ],
+  "hooks": "./.claude/settings.json"
+}

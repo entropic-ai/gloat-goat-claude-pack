@@ -1,0 +1,24 @@
+{
+  "name": "gloat-goat-wes-anderson",
+  "version": "0.2.0",
+  "description": "Wes Anderson aesthetic expansion pack. Reframes commits, inventories, and diffs as symmetrical title cards — a precise narrator, a melancholic curator of legacy code, and a quiet enforcer of pairing.",
+  "author": {
+    "name": "ENTROP/C"
+  },
+  "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "parody",
+    "wes-anderson",
+    "aesthetic-pack"
+  ],
+  "commands": "./.claude/commands/",
+  "skills": "./.claude/skills/",
+  "agents": [
+    "./.claude/agents/narrator-of-precise-things.md",
+    "./.claude/agents/melancholic-curator.md"
+  ],
+  "hooks": "./.claude/settings.json"
+}

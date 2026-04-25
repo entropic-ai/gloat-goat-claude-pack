@@ -1,6 +1,6 @@
 # 🐐 Gloat Goat for Claude Code — Cheat Sheet
 
-Quick reference for the `entropic-ai/gloat-goat-claude-pack` plugin.
+Quick reference for the `entropic-ai/gloat-goat-marketplace` plugin.
 
 ---
 
@@ -8,7 +8,7 @@ Quick reference for the `entropic-ai/gloat-goat-claude-pack` plugin.
 
 ```bash
 # Add this repo as a marketplace
-claude plugin marketplace add entropic-ai/gloat-goat-claude-pack
+claude plugin marketplace add entropic-ai/gloat-goat-marketplace
 
 # Install for all projects
 claude plugin install gloat-goat@gloat-goat-marketplace --scope user
@@ -80,7 +80,7 @@ Invoke by mention or via `/agents` flow.
 - SessionStart
 - SessionEnd
 
-Config lives in `.claude/settings.json`.
+Config lives in `plugins/gloat-goat/.claude/settings.json` (inside the marketplace repo).
 
 ---
 
@@ -97,8 +97,8 @@ claude plugin uninstall gloat-goat@gloat-goat-marketplace --scope project
 ## 8) Dev/local marketplace flow
 
 ```bash
-git clone https://github.com/entropic-ai/gloat-goat-claude-pack.git
-claude plugin marketplace add ./gloat-goat-claude-pack
+git clone https://github.com/entropic-ai/gloat-goat-marketplace.git
+claude plugin marketplace add ./gloat-goat-marketplace
 claude plugin install gloat-goat@gloat-goat-marketplace --scope project
 ```
 

@@ -1,0 +1,84 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '\\n  ENTROPIC PICTURES PRESENTS\\n\\n  a CLAUDE production\\n\\n  starring\\n  CLAUDE\\n\\n  with\\n  THE TERMINAL\\n  THE COMPILER\\n  and DENNIS K. as \"The Mentor\"\\n\\n  [YOUR SESSION HAS BEGUN]\\n\\n'"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '\\n  [END OF FEATURE]\\n\\n  CAST (in order of appearance)\\n    CLAUDE        ............... as themself\\n    THE TERMINAL  ............... as the medium\\n    THE COMPILER  ............... as the witness\\n    THE USER      ............... played by themselves\\n\\n  ENTROPIC PICTURES — fade to black —\\n\\n'"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash.*git push.*origin (main|master|production)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🎬 ROLL CAMERA. Pushing to main. There is no second take.'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash.*(?:npm test|pytest|jest|vitest|cargo test)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🎬 [QUIET ON SET] Tests rolling. Hold the questions until after the take.'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash.*(?:deploy|kubectl apply|terraform apply)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🎬 [ACT III] Deployment in progress. The audience is leaning in.'"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash.*git commit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🎬 ✓ Scene committed to the cut. The dailies look good.'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash.*git push",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🎬 ✓ Print struck. Distribution underway.'"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "(?i)(intermission|break|coffee|brb)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🎬 [INTERMISSION] House lights up. Stretch your legs. We will see you for Act II.'"
+          }
+        ]
+      }
+    ]
+  }
+}

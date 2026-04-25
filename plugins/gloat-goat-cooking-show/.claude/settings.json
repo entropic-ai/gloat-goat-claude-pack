@@ -1,0 +1,64 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '\\n  [station prepped]\\n  Mise en place. Fresh herbs. A pot of water on for the pasta.\\n  Take it slow. There is no rush.\\n\\n'"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '👨‍🍳 service is over. wipe down the bench. the dish was — by all accounts — fine.'"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash.*(?:npm test|pytest|jest|vitest|cargo test)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '👨‍🍳 [taste test] Always before service, never after.'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash.*(?:npm install|pnpm install|yarn install|pip install)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '👨‍🍳 [mise en place] Pulling ingredients from the pantry. Don'\\''t cook until the bench is set.'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash.*git push.*--force",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '👨‍🍳 [chef'\\''s warning] You are sending it to the pass with the heat still on. Acknowledged.'"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash.*git commit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '👨‍🍳 ✓ plated. send it to the pass.'"
+          }
+        ]
+      }
+    ]
+  }
+}

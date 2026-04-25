@@ -1,0 +1,64 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '\\n  [the curtain rises]\\n  The stage is set. The repository awaits its fate.\\n  Speak when ready. The audience is patient, for now.\\n\\n'"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🎭 [curtain] our revels now are ended. the build holds. exeunt.'"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash.*git push.*origin (main|master)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🎭 [Act III, the climax] thou dost push to main. there is no stage manager who can call this back.'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash.*git rm",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🎭 [a death scene approaches] something is about to be deprecated. consider /death-scene before it goes.'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash.*git push.*--force",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🎭 [a force push] thou rewritest history. the chronicler notes it.'"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash.*git commit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🎭 ✓ a scene committed to the cut.'"
+          }
+        ]
+      }
+    ]
+  }
+}

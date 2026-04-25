@@ -1,0 +1,23 @@
+{
+  "name": "gloat-goat-team",
+  "version": "0.2.0",
+  "description": "Team and process theater. Escalate any typo to the CTO. Inflate any task into a twelve-subtask Jira epic. Run any decision through a six-stakeholder committee that always tables it. Includes a meeting-detection hook for additional ceremony.",
+  "author": {
+    "name": "ENTROP/C"
+  },
+  "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "parody",
+    "team"
+  ],
+  "commands": "./.claude/commands/",
+  "agents": [
+    "./.claude/agents/design-by-committee.md",
+    "./.claude/agents/sprint-planner-from-hell.md",
+    "./.claude/agents/compliance-officer.md"
+  ],
+  "hooks": "./.claude/settings.json"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "gloat-goat-hollywood",
+  "version": "0.2.0",
+  "description": "Hollywood aesthetic expansion pack. Reframes your codebase as cinema — pitches, screenplays, taglines, casting, festival reviews, and a session that opens with credits.",
+  "author": {
+    "name": "ENTROP/C"
+  },
+  "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "parody",
+    "hollywood",
+    "aesthetic-pack"
+  ],
+  "commands": "./.claude/commands/",
+  "skills": "./.claude/skills/",
+  "agents": [
+    "./.claude/agents/script-doctor.md",
+    "./.claude/agents/casting-director.md",
+    "./.claude/agents/sequel-pitcher.md",
+    "./.claude/agents/film-festival-judge.md"
+  ],
+  "hooks": "./.claude/settings.json"
+}

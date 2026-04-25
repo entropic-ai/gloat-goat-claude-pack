@@ -1,0 +1,66 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '\\n  [the binder is open]\\n  This is a Gloat Goat True Crime session.\\n  All quotes you will hear are fabricated for narrative purposes.\\n\\n'"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🎙️ case continues. the binder is on your desk. all quotes were fabricated.'"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash.*git revert",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🎙️ [the rollback] Twelve minutes. That is all it took, in the end. Or it will be.'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash.*git push.*--force",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🎙️ [exhibit forthcoming] A force push has been entered into the record. The binder grows.'"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash.*git commit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🎙️ a new exhibit has been logged.'"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "(?i)(outage|incident|production went down|503|postmortem)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🎙️ [the case is reopened] The investigator is available. The witnesses can be staged. The transcript will be marked.'"
+          }
+        ]
+      }
+    ]
+  }
+}

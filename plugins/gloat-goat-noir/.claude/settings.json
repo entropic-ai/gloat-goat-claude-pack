@@ -1,0 +1,75 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '\\n  [the office is open]\\n  Rain on the terminal. The case file is on the desk.\\n  Another case walks in around now.\\n\\n'"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '� case is on the desk. lights off. the door stays unlocked.'"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash.*git blame",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🚬 [asking the blame] The blame is not the answer. The blame is where the answer is.'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash.*(?:rg|grep) .*Error|exception|fail",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🚬 [walking the logs] The logs do not lie. They do, sometimes, omit.'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash.*git push.*--force",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🚬 [a force push] You are rewriting history. The detective notes the time.'"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash.*git commit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🚬 a new entry in the file.'"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "(?i)(error|exception|stack trace|production went down|503|outage)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🚬 [a case walks in] Detective is on the clock. The next move is yours.'"
+          }
+        ]
+      }
+    ]
+  }
+}

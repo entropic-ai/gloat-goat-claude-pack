@@ -1,0 +1,55 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '\\n  ──────────────────────────────────────\\n            THE SESSION\\n            of today\\n\\n     The terminal is open. The palette\\n      is selected. The cursor is, as\\n         it has always been, beige.\\n\\n  ──────────────────────────────────────\\n\\n'"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🎀 the session has concluded. it was, on the whole, fine.'"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash.*git rm",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🎀 [a small ceremony] something is leaving the collection. consider /commit-anderson before it goes.'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash.*git push.*--force",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🎀 [an asymmetric edit] history is being rewritten. the curator notes the time.'"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash.*git commit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🎀 ✓ a small amendment, recorded in the title cards.'"
+          }
+        ]
+      }
+    ]
+  }
+}

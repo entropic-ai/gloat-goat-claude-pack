@@ -1,0 +1,18 @@
+{
+  "name": "gloat-goat-existential",
+  "version": "0.2.0",
+  "description": "Dark-humor pack for late-stage workplace ennui. Manifest your promotion (in spirit). Plug out hope, one TODO at a time. Strip identifiers of meaning. Forecast your own obsolescence with confidence. With late-night-commit hooks for additional regret.",
+  "author": {
+    "name": "ENTROP/C"
+  },
+  "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "parody",
+    "existential"
+  ],
+  "commands": "./.claude/commands/",
+  "hooks": "./.claude/settings.json"
+}

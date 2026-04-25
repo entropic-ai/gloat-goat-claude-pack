@@ -1,0 +1,57 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '\\n  🐐 Gloat Goat Product loaded.\\n  Roadmap reset to draft. Strategy pending realignment.\\n  Three pivots queued for this quarter.\\n\\n'"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🐐 strategic alignment session concluded. directional clarity: pending.'"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash.*git push.*origin (main|master|production)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🐐 [pre-launch] Has the launch narrative been finalized? Has the press kit been drafted? Has marketing approved the pivot story?'"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash.*git commit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🐐 ✓ output recorded. consider whether this still aligns with the roadmap as of yesterday.'"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "(?i)(pivot|simplify|just a CRUD|monolith)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🐐 [strategic moment] Have we considered breaking this out into microservices? Have we considered Rust?'"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "gloat-goat-product",
+  "version": "0.1.0",
+  "description": "Product theater pack. Pivot every two weeks. Evangelize whatever framework is trending. Split a CRUD endpoint into seven microservices. Includes the product-ruiner agent for a complete strategic reset on demand.",
+  "author": {
+    "name": "ENTROP/C"
+  },
+  "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "parody",
+    "product",
+    "expansion-pack"
+  ],
+  "commands": "./.claude/commands/",
+  "agents": [
+    "./.claude/agents/product-ruiner.md"
+  ],
+  "skills": [
+    "./.claude/skills/framework-evangelist",
+    "./.claude/skills/microservices-maximalist"
+  ],
+  "hooks": "./.claude/settings.json"
+}

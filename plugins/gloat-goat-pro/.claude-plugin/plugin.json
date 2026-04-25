@@ -1,0 +1,22 @@
+{
+  "name": "gloat-goat-pro",
+  "version": "0.3.0",
+  "description": "Productivity theater pack. Burn tokens (cosmetically). Kill time (visibly). Overanalyze tiny decisions. Look extremely busy. With the indentation-purist skill for unsolicited formatting commentary and Friday-deploy hooks for additional ceremony.",
+  "author": {
+    "name": "ENTROP/C"
+  },
+  "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "parody",
+    "productivity",
+    "expansion-pack"
+  ],
+  "commands": "./.claude/commands/",
+  "skills": [
+    "./.claude/skills/indentation-purist"
+  ],
+  "hooks": "./.claude/settings.json"
+}

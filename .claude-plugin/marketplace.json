@@ -1,26 +1,210 @@
 {
   "name": "gloat-goat-marketplace",
   "owner": {
-    "name": "entropic-ai"
+    "name": "ENTROP/C"
   },
   "plugins": [
     {
       "name": "gloat-goat",
-      "source": {
-        "source": "github",
-        "repo": "entropic-ai/gloat-goat-claude-pack"
-      },
-      "description": "Parody plugin pack for Claude Code.",
-      "version": "0.1.0",
+      "source": "./plugins/gloat-goat",
+      "description": "The original parody pack for Claude Code. Slash commands, auto-invoking skills, six subagents, and a /keepsake command for preserving brilliant outputs across all gloat-goat packs.",
+      "version": "0.2.0",
       "author": {
-        "name": "entropic-ai"
+        "name": "ENTROP/C"
       },
-      "repository": "https://github.com/entropic-ai/gloat-goat-claude-pack",
+      "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
       "license": "MIT",
       "keywords": [
         "claude-code",
         "parody",
         "meme"
+      ]
+    },
+    {
+      "name": "gloat-goat-pro",
+      "source": "./plugins/gloat-goat-pro",
+      "description": "Productivity theater pack. Burn tokens (cosmetically). Kill time (visibly). Overanalyze tiny decisions. Look extremely busy. Now with the indentation-purist skill for unsolicited formatting commentary on every code block.",
+      "version": "0.3.0",
+      "author": {
+        "name": "ENTROP/C"
+      },
+      "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+      "license": "MIT",
+      "keywords": [
+        "claude-code",
+        "parody",
+        "productivity",
+        "expansion-pack"
+      ]
+    },
+    {
+      "name": "gloat-goat-team",
+      "source": "./plugins/gloat-goat-team",
+      "description": "Team and process theater. Escalate any typo to the CTO. Inflate any task into a twelve-subtask Jira epic. Run any decision through a six-stakeholder committee.",
+      "version": "0.2.0",
+      "author": {
+        "name": "ENTROP/C"
+      },
+      "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+      "license": "MIT",
+      "keywords": [
+        "claude-code",
+        "parody",
+        "team",
+        "expansion-pack"
+      ]
+    },
+    {
+      "name": "gloat-goat-existential",
+      "source": "./plugins/gloat-goat-existential",
+      "description": "Dark-humor pack for late-stage workplace ennui. Manifest your promotion (in spirit). Plug out hope. Strip identifiers of meaning. Forecast your own obsolescence.",
+      "version": "0.2.0",
+      "author": {
+        "name": "ENTROP/C"
+      },
+      "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+      "license": "MIT",
+      "keywords": [
+        "claude-code",
+        "parody",
+        "existential",
+        "expansion-pack"
+      ]
+    },
+    {
+      "name": "gloat-goat-product",
+      "source": "./plugins/gloat-goat-product",
+      "description": "Product theater pack. Pivot every two weeks. Evangelize whatever framework is trending. Split a CRUD endpoint into seven microservices. Ruin a working product with the product-ruiner agent.",
+      "version": "0.1.0",
+      "author": {
+        "name": "ENTROP/C"
+      },
+      "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+      "license": "MIT",
+      "keywords": [
+        "claude-code",
+        "parody",
+        "product",
+        "expansion-pack"
+      ]
+    },
+    {
+      "name": "gloat-goat-hollywood",
+      "source": "./plugins/gloat-goat-hollywood",
+      "description": "Hollywood aesthetic pack with cinematic reframing commands, skills, and agents.",
+      "version": "0.1.0",
+      "author": {
+        "name": "ENTROP/C"
+      },
+      "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+      "license": "MIT",
+      "keywords": [
+        "claude-code",
+        "parody",
+        "hollywood",
+        "aesthetic-pack"
+      ]
+    },
+    {
+      "name": "gloat-goat-noir",
+      "source": "./plugins/gloat-goat-noir",
+      "description": "Noir aesthetic pack with detective-style debugging reframes.",
+      "version": "0.1.0",
+      "author": {
+        "name": "ENTROP/C"
+      },
+      "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+      "license": "MIT",
+      "keywords": [
+        "claude-code",
+        "parody",
+        "noir",
+        "aesthetic-pack"
+      ]
+    },
+    {
+      "name": "gloat-goat-cooking-show",
+      "source": "./plugins/gloat-goat-cooking-show",
+      "description": "Cooking show aesthetic pack that reframes implementation work as recipes.",
+      "version": "0.1.0",
+      "author": {
+        "name": "ENTROP/C"
+      },
+      "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+      "license": "MIT",
+      "keywords": [
+        "claude-code",
+        "parody",
+        "cooking",
+        "aesthetic-pack"
+      ]
+    },
+    {
+      "name": "gloat-goat-nature-doc",
+      "source": "./plugins/gloat-goat-nature-doc",
+      "description": "Nature documentary aesthetic pack with ecosystem-style code observations.",
+      "version": "0.1.0",
+      "author": {
+        "name": "ENTROP/C"
+      },
+      "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+      "license": "MIT",
+      "keywords": [
+        "claude-code",
+        "parody",
+        "nature-documentary",
+        "aesthetic-pack"
+      ]
+    },
+    {
+      "name": "gloat-goat-true-crime",
+      "source": "./plugins/gloat-goat-true-crime",
+      "description": "True crime aesthetic pack for incident storytelling and forensic parody.",
+      "version": "0.1.0",
+      "author": {
+        "name": "ENTROP/C"
+      },
+      "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+      "license": "MIT",
+      "keywords": [
+        "claude-code",
+        "parody",
+        "true-crime",
+        "aesthetic-pack"
+      ]
+    },
+    {
+      "name": "gloat-goat-shakespearean",
+      "source": "./plugins/gloat-goat-shakespearean",
+      "description": "Shakespearean aesthetic pack with theatrical prompts and poetic reframing.",
+      "version": "0.1.0",
+      "author": {
+        "name": "ENTROP/C"
+      },
+      "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+      "license": "MIT",
+      "keywords": [
+        "claude-code",
+        "parody",
+        "shakespearean",
+        "aesthetic-pack"
+      ]
+    },
+    {
+      "name": "gloat-goat-wes-anderson",
+      "source": "./plugins/gloat-goat-wes-anderson",
+      "description": "Wes Anderson aesthetic pack with symmetrical, deadpan formatting.",
+      "version": "0.1.0",
+      "author": {
+        "name": "ENTROP/C"
+      },
+      "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+      "license": "MIT",
+      "keywords": [
+        "claude-code",
+        "parody",
+        "wes-anderson",
+        "aesthetic-pack"
       ]
     }
   ]

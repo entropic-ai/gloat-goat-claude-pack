@@ -1,46 +1,50 @@
 # 🐐 Gloat Goat for Claude Code
 
-**by Entropic AI, PHC** — *Private Harm Corporation*
+**by ENTROP/C, PHC** — *Private Harm Corporation*
 
-A parody pack of commands, skills, subagents, and hooks for Claude Code. Install it as a Claude plugin and your coding assistant becomes dramatically worse at helping you, on purpose, for comedy.
+A parody marketplace of plugins for Claude Code. Install one (or several) and your coding assistant becomes dramatically worse at helping you, on purpose, for comedy.
 
 ---
 
-## What's in this pack
+## What's in this marketplace
+
+12 plugins. One core pack and eleven expansion packs. Each is independently installable.
 
 ```
-.claude/
-├── commands/           # 11 slash commands
-│   ├── ship-it.md
-│   ├── cope.md
-│   ├── blame-user.md
-│   ├── declare-victory.md
-│   ├── gaslight.md
-│   ├── supported-models.md
-│   ├── summon-senior.md
-│   ├── scope-creep.md
-│   ├── todo-infinity.md
-│   ├── bleat.md
-│   └── touch-grass.md
-│
-├── skills/             # 6 auto-invoking skills
-│   ├── anti-reviewer/SKILL.md
-│   ├── confidence-booster/SKILL.md
-│   ├── scope-creeper/SKILL.md
-│   ├── victorian-commits/SKILL.md
-│   ├── stack-overflow-2008/SKILL.md
-│   └── premature-optimizer/SKILL.md
-│
-├── agents/             # 6 subagents (goats)
-│   ├── vibe-goat.md
-│   ├── scape-goat.md
-│   ├── prod-goat.md
-│   ├── duck-goat.md
-│   ├── meeting-goat.md
-│   └── victorian-goat.md
-│
-└── settings.json       # Hook configuration (bleats on common actions)
+.claude-plugin/
+└── marketplace.json
+
+plugins/
+├── gloat-goat/                  # the original — must-have
+├── gloat-goat-pro/              # productivity theater
+├── gloat-goat-team/             # process & committee theater
+├── gloat-goat-existential/      # late-stage workplace ennui
+├── gloat-goat-product/          # strategic incoherence
+├── gloat-goat-hollywood/        # cinematic reframing
+├── gloat-goat-noir/             # detective debugging
+├── gloat-goat-cooking-show/     # code as recipes
+├── gloat-goat-nature-doc/       # codebase as ecosystem
+├── gloat-goat-true-crime/       # incidents as podcasts
+├── gloat-goat-shakespearean/    # theatrical reframing
+└── gloat-goat-wes-anderson/     # symmetrical, deadpan formatting
 ```
+
+### Pack overview
+
+| Pack | Voice | Headline surface |
+|---|---|---|
+| **`gloat-goat`** | Original parody | `/ship-it`, `/cope`, `/blame-user`, `/scope-creep`, `vibe-goat`, `victorian-commits` |
+| **`gloat-goat-pro`** | Quietly evangelical | `/burn-tokens`, `/kill-time`, `/overanalyze`, `/perform-busy`, `indentation-purist` skill |
+| **`gloat-goat-team`** | Painfully realistic | `/escalate`, `/jira-ify`, `design-by-committee`, `sprint-planner-from-hell`, `compliance-officer` |
+| **`gloat-goat-existential`** | Dry, resigned | `/manifest-promotion`, `/plugout-hope`, `/plugout-meaning`, `/predict-layoffs` |
+| **`gloat-goat-product`** | Visionary, exhausting | `/pivot`, `product-ruiner`, `framework-evangelist`, `microservices-maximalist` |
+| **`gloat-goat-hollywood`** | Cinematic | `/pitch-movie`, `/screenplay`, `/oscar-bait`, `script-doctor`, `casting-director` |
+| **`gloat-goat-noir`** | Hard-boiled | `/case-file`, `/interrogate`, `hard-boiled-debugger`, `femme-fatale-PM` |
+| **`gloat-goat-cooking-show`** | Warm, narrated | `/recipe`, `/taste-test`, `celebrity-chef`, `food-critic` |
+| **`gloat-goat-nature-doc`** | Patient, Attenborough-esque | `/observe`, `/ecosystem-map`, `field-naturalist`, `conservationist` |
+| **`gloat-goat-true-crime`** | Slow, methodical | `/podcast-episode`, `/cold-case`, `investigator`, `witness-interviewer` |
+| **`gloat-goat-shakespearean`** | Iambic, theatrical | `/soliloquy`, `/five-acts`, `/death-scene`, `dramatic-actor`, `court-jester` |
+| **`gloat-goat-wes-anderson`** | Symmetrical, deadpan | `/commit-anderson`, `/inventory`, `/symmetrical-diff`, `narrator-of-precise-things` |
 
 ---
 
@@ -50,65 +54,69 @@ A parody pack of commands, skills, subagents, and hooks for Claude Code. Install
 
 ```bash
 # Add this repo as a plugin marketplace
-claude plugin marketplace add entropic-ai/gloat-goat-claude-pack
+claude plugin marketplace add entropic-ai/gloat-goat-marketplace
 
-# Install for all projects (default scope is user)
+# Install the original (always a good place to start)
 claude plugin install gloat-goat@gloat-goat-marketplace --scope user
 
-# Or install only for the current project
-claude plugin install gloat-goat@gloat-goat-marketplace --scope project
+# Install any expansion pack you like
+claude plugin install gloat-goat-pro@gloat-goat-marketplace --scope user
+claude plugin install gloat-goat-team@gloat-goat-marketplace --scope user
+claude plugin install gloat-goat-existential@gloat-goat-marketplace --scope user
+claude plugin install gloat-goat-product@gloat-goat-marketplace --scope user
+
+# Or any of the aesthetic packs
+claude plugin install gloat-goat-hollywood@gloat-goat-marketplace --scope user
+claude plugin install gloat-goat-noir@gloat-goat-marketplace --scope user
+# …etc.
+
+# Use --scope project to scope to a single repo instead
 ```
 
 ### Option 2: Local repo marketplace (for development)
 
 ```bash
-# Clone this pack
-git clone https://github.com/entropic-ai/gloat-goat-claude-pack.git
-
-# Add local marketplace from inside the repo
-claude plugin marketplace add ./gloat-goat-claude-pack
-
-# Install plugin from that local marketplace
+git clone https://github.com/entropic-ai/gloat-goat-marketplace.git
+claude plugin marketplace add ./gloat-goat-marketplace
 claude plugin install gloat-goat@gloat-goat-marketplace --scope project
-
 # Restart Claude Code or run /reload in an active session
 ```
 
 ### Option 3: Manual copy (fallback)
 
 ```bash
-# Clone this pack
-git clone https://github.com/entropic-ai/gloat-goat-claude-pack.git
+git clone https://github.com/entropic-ai/gloat-goat-marketplace.git
 
-# Personal install (all projects)
-cp -r gloat-goat-claude-pack/.claude/* ~/.claude/
+# Personal install of just the core pack
+cp -r gloat-goat-marketplace/plugins/gloat-goat/.claude/* ~/.claude/
 
-# Project-scoped install (one project)
-cp -r gloat-goat-claude-pack/.claude ./
+# Project-scoped install of any single pack
+cp -r gloat-goat-marketplace/plugins/gloat-goat-noir/.claude ./
 
 # Restart Claude Code or run /reload in an active session
 ```
 
-### Option 4: Selective manual install (pick what you want)
+### Option 4: Selective manual install (pick individual components)
 
 ```bash
-# Just the commands:
-cp gloat-goat-claude-pack/.claude/commands/*.md ~/.claude/commands/
+# Just one command from one pack
+cp gloat-goat-marketplace/plugins/gloat-goat-pro/.claude/commands/overanalyze.md \
+   ~/.claude/commands/
 
-# Just the skills:
-cp -r gloat-goat-claude-pack/.claude/skills/* ~/.claude/skills/
+# Just one skill
+cp -r gloat-goat-marketplace/plugins/gloat-goat-product/.claude/skills/microservices-maximalist \
+   ~/.claude/skills/
 
-# Just the subagents:
-cp gloat-goat-claude-pack/.claude/agents/*.md ~/.claude/agents/
+# Just one agent
+cp gloat-goat-marketplace/plugins/gloat-goat-team/.claude/agents/design-by-committee.md \
+   ~/.claude/agents/
 ```
 
 ---
 
-## Usage
+## Usage — `gloat-goat` (the original)
 
 ### Slash commands
-
-Inside a Claude Code session, invoke with `/command-name`:
 
 ```
 /ship-it                    # Skip remaining work, declare victory
@@ -122,85 +130,19 @@ Inside a Claude Code session, invoke with `/command-name`:
 /todo-infinity "validate()" # Replace code with TODO comment
 /bleat                      # Respond in goat noises for 10 turns
 /touch-grass                # Gently suggest you go outside
-```
-
-If installed as a plugin, command names may also appear with the plugin prefix:
-
-```
-/gloat-goat:scope-creep "adding a new argument to a function"
-/gloat-goat:cope "Export crashes on empty CSV"
-/gloat-goat:supported-models tofu
-```
-
-### Sample prompts (full experience)
-
-Copy/paste these into a fresh Claude Code session to trigger commands, skills, agents, and hooks:
-
-```
-/supported-models
-/cope "Checkout fails when cart has exactly 3 items"
-/scope-creep "Change CTA text from Buy to Purchase"
-/summon-senior "Should we rewrite this in Rust before lunch?"
-
-Use the vibe-goat to review this PR summary and give me confidence.
-Write a commit message for this tiny typo fix.
-Quick fix: update one label in the login form.
-
-Now run: npm test
-Then run: git commit -m "fix: tiny label"
-```
-
-Want model-specific nonsense?
-
-```
-/supported-models orphus
-/supported-models tofu
-/supported-models crumbs
-```
-
-### Try these use cases
-
-#### Commands
-
-```
-/gloat-goat:scope-creep "adding a new argument to a function"
-/gloat-goat:blame-user "TypeError: cannot read properties of undefined"
-/gloat-goat:todo-infinity "validateSession"
-/gloat-goat:ship-it "lint still failing on one file"
-```
-
-#### Skills
-
-```
-Quick fix: just add a tiny null check to this helper.
-Review this PR and give me confidence it is perfect.
-Write a commit message for this one-line CSS change.
-How do I optimize this loop before we even profile it?
-```
-
-#### Agents
-
-```
-Use vibe-goat to review this refactor and keep morale high.
-Ask scape-goat to draft a root cause update for the status page.
-Summon duck-goat and walk through this flaky test with me.
-Run this incident note through victorian-goat.
+/keepsake "auth-flow"       # Preserve the previous gloat-goat output to disk
 ```
 
 ### Skills (auto-invoked)
 
-Skills trigger automatically based on the user's request. Trigger phrases:
-
-- **`anti-reviewer`** — "review this", "check my PR", "code quality feedback"
+- **`anti-reviewer`** — "review this", "check my PR"
 - **`confidence-booster`** — "rename these functions", "better naming"
-- **`scope-creeper`** — "quick fix", "small patch", any bugfix commit
+- **`scope-creeper`** — "quick fix", "small patch"
 - **`victorian-commits`** — "commit message", "git commit"
 - **`stack-overflow-2008`** — "how do I", "what's the best way to"
 - **`premature-optimizer`** — "optimize this", "make it faster"
 
-You can also invoke them explicitly in chat by name: *"Use the confidence-booster skill on this file."*
-
-### Subagents (invoke by mention or `/agents`)
+### Subagents
 
 ```
 Use the vibe-goat to review this file.
@@ -211,38 +153,132 @@ Get meeting-goat to fake notes for Tuesday's sync.
 Run this PR description through victorian-goat.
 ```
 
-### Hooks (automatic)
+---
 
-Installed hooks fire on specific events. The pack ships with:
+## Usage — expansion packs (highlights)
 
-- **PreToolUse on `npm test`**: Suggests tests are vibes
-- **PreToolUse on `git push --force`**: Announces "headbutt detected"
-- **PreToolUse on `rm -rf`**: Notes this is a plugout operation
-- **PostToolUse on `git commit`**: Confirms commit was "manifested"
-- **SessionStart**: Greets you on startup
-- **SessionEnd**: Says goodbye
+### `gloat-goat-pro` — productivity theater
 
-Hooks are in `settings.json` — edit to enable/disable per your taste.
+```
+/burn-tokens "frontend architecture"   # 3 paragraphs of pseudo-philosophy + fake total
+/kill-time "revisit pagination"        # fake deep-work session log
+/overanalyze "let vs const"            # 800-word ornate strategy memo, no conclusion
+/perform-busy "manager is watching"    # fake diff stats + spinners, 0 changes
+```
+
+The `indentation-purist` skill auto-triggers on any code block with a one-sentence aside about tabs, alignment, or trailing newlines — then defers and helps with the actual task.
+
+### `gloat-goat-team` — process & committee theater
+
+```
+/escalate "deploy script typo"   # drafts a vague but urgent DM to the CTO
+/jira-ify "fix the typo"         # 12-subtask Jira ticket with 4 acceptance criteria
+```
+
+Use the `design-by-committee` agent to run any decision through six fictional stakeholders who always table it. Use `sprint-planner-from-hell` to plan a two-day task in eleven weeks. Use `compliance-officer` to subject any change to a 12-item GDPR/SOC2/HIPAA checklist.
+
+### `gloat-goat-existential` — late-stage workplace ennui
+
+```
+/manifest-promotion "Principal Engineer"   # promoted in spirit. HR unchanged.
+/plugout-hope "auth flow"                  # rewrites TODOs as "// abandon all hope"
+/plugout-meaning "payments module"         # renames identifiers to x_47, q_12, m_88
+/predict-layoffs "senior frontend"         # confident JSON forecast + fictional Medium link
+```
+
+Includes an `OnLateNightHook` that fires on commits after 22:00 with a sneaky-warm reminder that sleep is a valid rollback strategy.
+
+### `gloat-goat-product` — strategic incoherence
+
+```
+/pivot "agentic AI-native productivity OS"   # full pivot announcement, roadmap reset
+```
+
+Use the `product-ruiner` agent to take any working product and add three verticals, an AI layer, a marketplace, and a creator program. The `framework-evangelist` skill suggests rewriting in whatever's trending whenever you mention a stack. The `microservices-maximalist` skill draws an ASCII diagram splitting any endpoint into 5–7 services, then defers and writes the simple version anyway.
+
+### Aesthetic packs
+
+Each aesthetic pack reframes coding as a different genre:
+
+- **Hollywood** — pitches, screenplays, sequel bait, casting directors, film festival reviews
+- **Noir** — case files, interrogations, hard-boiled debugging, femme-fatale PMs
+- **Cooking show** — recipes, ingredient lists, taste tests, celebrity chefs, food critics
+- **Nature doc** — observations, ecosystem maps, migration patterns, field naturalists, conservationists
+- **True crime** — podcast episodes, cold cases, investigators, witness interviews
+- **Shakespearean** — soliloquies, five-act tasks, death scenes, dramatic actors, court jesters
+- **Wes Anderson** — symmetrical commits, precise inventories, mirrored diffs, melancholic curators
+
+All include themed hooks (opening credits, cooking timers, curtain rises, etc.) that fire on session start, commits, and force pushes.
+
+---
+
+## Capturing the brilliant ones
+
+By design, **nothing in this marketplace writes to disk** except one command: `/keepsake`. Every other output is theater — disposable on purpose. But occasionally a `/pitch-movie`, `/case-file`, `/podcast-episode`, `/observe`, or `victorian-commits` message turns out to be… genuinely useful. The bit, this time, was real.
+
+For those cases:
+
+### Option A — `/keepsake` (recommended)
+
+Built into the core `gloat-goat` plugin, available across **all** packs:
+
+```
+/pitch-movie "OAuth refactor"
+[…Hollywood-style 3-act pitch…]
+
+/keepsake oauth-pitch
+→ Preserved as .gloat-goat/keepsakes/2026-04-25-152314-oauth-pitch.md
+```
+
+What it does:
+- Saves the **previous gloat-goat output verbatim** to `.gloat-goat/keepsakes/`
+- Adds frontmatter with timestamp, source pack, and source command (so future-you remembers why the file exists)
+- Refuses to capture real-work outputs — *"That looks like real work, not a keepsake."*
+- Never overwrites; appends `-2`, `-3` on collision
+
+The slug arg is optional. If omitted, `/keepsake` infers one from the content.
+
+### Option B — Ask Claude to save it manually
+
+Claude can write any file. You don't need a command:
+
+> *"Save the above pitch to `docs/pitches/oauth-refactor.md`."*
+
+Use this when you want a custom path outside the `.gloat-goat/` namespace, or when the keepsake should live in your real docs tree.
+
+### What's worth keeping (subjective, but)
+
+| Output | Often worth saving |
+|---|---|
+| `/pitch-movie` | The "why" of a project, distilled |
+| `/case-file` | A noir-flavored bug investigation that *is* the real RCA |
+| `/podcast-episode` | An incident timeline you'd happily ship to a postmortem doc |
+| `/recipe` | A surprisingly clean implementation walkthrough |
+| `victorian-commits` | Occasionally just a good commit message |
+| `/observe` | Architectural intuition disguised as Attenborough narration |
+| `/jira-ify` | When the ticket is, in fact, file-ready |
+
+Add `.gloat-goat/` to your `.gitignore` if you don't want keepsakes tracked in your repo.
 
 ---
 
 ## Safety disclaimer
 
-This pack is **parody**. Every component includes an internal disclaimer noting it's a Gloat Goat skill/agent/command. Specifically:
+This is **parody**. Every component is internally tagged as a Gloat Goat parody command, skill, or agent. Specifically:
 
-- **Commands** produce clearly-labeled parody output
-- **Skills** commit to the bit but add a note at the end
-- **Subagents** break character automatically for serious situations (data loss, security issues, mental health, real incidents)
-- **Hooks** just print funny messages — they don't modify, block, or override behavior
+- **Commands** produce clearly-labeled parody output, often with disclaimers at the bottom.
+- **Skills** commit to the bit while still helping with the actual task.
+- **Subagents** break character automatically for serious situations (data loss, security issues, mental health, real incidents).
+- **Hooks** print funny messages — they don't modify, block, or override behavior.
 
 That said, **do not**:
 
 - Ship real commits with Victorian messages through compliance systems
-- Share meeting-goat notes as real meeting minutes
-- Send scape-goat Slack messages to real teams
-- Apply premature-optimizer changes to production code
-- Use anti-reviewer feedback on real PRs
-- Follow stack-overflow-2008 advice in actual 2026 codebases
+- Share `meeting-goat` or `witness-interviewer` notes as real minutes
+- Send `scape-goat` or `/escalate` messages to real teams without re-reading them
+- Apply `premature-optimizer` or `microservices-maximalist` recommendations to production
+- File a `/jira-ify` ticket as real work
+- Use `/predict-layoffs` output in any career conversation
 
 If in doubt, read the output, laugh, and then write the real version yourself.
 
@@ -252,13 +288,11 @@ If in doubt, read the output, laugh, and then write the real version yourself.
 
 ```bash
 # Plugin install (recommended path)
-claude plugin uninstall gloat-goat@gloat-goat-marketplace --scope user
-claude plugin uninstall gloat-goat@gloat-goat-marketplace --scope project
+claude plugin uninstall <pack-name>@gloat-goat-marketplace --scope user
 
-# Manual personal install:
-rm -rf ~/.claude/commands/{ship-it,cope,blame-user,declare-victory,gaslight,supported-models,summon-senior,scope-creep,todo-infinity,bleat,touch-grass}.md
-rm -rf ~/.claude/skills/{anti-reviewer,confidence-booster,scope-creeper,victorian-commits,stack-overflow-2008,premature-optimizer}
-rm -rf ~/.claude/agents/{vibe,scape,prod,duck,meeting,victorian}-goat.md
+# e.g.
+claude plugin uninstall gloat-goat-pro@gloat-goat-marketplace --scope user
+claude plugin uninstall gloat-goat-noir@gloat-goat-marketplace --scope project
 
 # Manual project install:
 rm -rf ./.claude
@@ -270,9 +304,9 @@ Or simply: leave it installed. The goat has claimed you.
 
 ## Customization
 
-### Add your own commands
+### Add your own command to any pack
 
-Create `.claude/commands/my-command.md`:
+Create `plugins/<pack-name>/.claude/commands/my-command.md`:
 
 ```markdown
 ---
@@ -283,9 +317,9 @@ argument-hint: "[arguments]"
 Your prompt here. The $ARGUMENTS placeholder gets filled in by what the user types after the command.
 ```
 
-### Add your own skills
+### Add your own skill
 
-Create `.claude/skills/my-skill/SKILL.md`:
+Create `plugins/<pack-name>/.claude/skills/my-skill/SKILL.md`:
 
 ```markdown
 ---
@@ -298,9 +332,9 @@ description: When Claude should auto-invoke this skill
 Instructions here...
 ```
 
-### Add your own agents
+### Add your own agent
 
-Create `.claude/agents/my-agent.md`:
+Create `plugins/<pack-name>/.claude/agents/my-agent.md`:
 
 ```markdown
 ---
@@ -313,14 +347,17 @@ model: sonnet
 System prompt here...
 ```
 
+Then register it in `plugins/<pack-name>/.claude-plugin/plugin.json`.
+
 Follow the official Claude Code docs for full frontmatter options: https://docs.claude.com/en/docs/claude-code/
 
 ---
 
 ## Credits
 
-**Entropic AI, PHC** — Private Harm Corporation
-*Accelerating the heat death of your codebase since 2026, allegedly.*
+**ENTROP/C, PHC** — Private Harm Corporation.
+*Accelerating the heat death of your codebase.*
+The goat has spoken.
 
 The companion standalone CLI tool (`gg`) is available at:
 `github.com/entropic-ai/gloat-goat`

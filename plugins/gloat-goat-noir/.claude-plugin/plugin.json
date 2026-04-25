@@ -1,0 +1,24 @@
+{
+  "name": "gloat-goat-noir",
+  "version": "0.2.0",
+  "description": "Noir aesthetic expansion pack. Reframes debugging as 1940s detective work — case files, interrogations, evidence boards, and a femme-fatale read of every PRD.",
+  "author": {
+    "name": "ENTROP/C"
+  },
+  "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "parody",
+    "noir",
+    "aesthetic-pack"
+  ],
+  "commands": "./.claude/commands/",
+  "skills": "./.claude/skills/",
+  "agents": [
+    "./.claude/agents/hard-boiled-debugger.md",
+    "./.claude/agents/femme-fatale-PM.md"
+  ],
+  "hooks": "./.claude/settings.json"
+}

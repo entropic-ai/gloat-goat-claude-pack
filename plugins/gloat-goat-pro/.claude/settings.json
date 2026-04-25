@@ -1,0 +1,55 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '\\n  🐐 Gloat Goat Pro loaded.\\n  Calendar blocked. Status set to 🟢 Deep Work.\\n  Output pending. Impact unclear.\\n\\n'"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🐐 deep work session complete. presence was maintained.'"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash.*git push.*(?:Fri|fri)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🐐 [FridayDeployHook] It is Friday. Ship it. The weekend is for living.'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash.*git commit.*(0[6-8]):",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🐐 [OnBreakfastHook] Up early. Crushing it. The grindset is real. (Sip your coffee.)'"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash.*git commit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🐐 ✓ output produced. impact deferred to retro.'"
+          }
+        ]
+      }
+    ]
+  }
+}

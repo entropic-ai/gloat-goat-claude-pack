@@ -1,0 +1,24 @@
+{
+  "name": "gloat-goat-cooking-show",
+  "version": "0.2.0",
+  "description": "Cooking Show aesthetic expansion pack. Reframes implementation as recipes — ingredients, mise en place, taste tests, and a celebrity chef who has strong opinions about pasta.",
+  "author": {
+    "name": "ENTROP/C"
+  },
+  "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "parody",
+    "cooking",
+    "aesthetic-pack"
+  ],
+  "commands": "./.claude/commands/",
+  "skills": "./.claude/skills/",
+  "agents": [
+    "./.claude/agents/celebrity-chef.md",
+    "./.claude/agents/food-critic.md"
+  ],
+  "hooks": "./.claude/settings.json"
+}

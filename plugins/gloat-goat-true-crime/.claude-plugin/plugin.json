@@ -1,0 +1,24 @@
+{
+  "name": "gloat-goat-true-crime",
+  "version": "0.2.0",
+  "description": "True Crime aesthetic expansion pack. Reframes incidents as podcast seasons — episodic outlines, fabricated witness interviews, cold-case reopenings, and a quiet investigator who refuses to leap to conclusions.",
+  "author": {
+    "name": "ENTROP/C"
+  },
+  "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "parody",
+    "true-crime",
+    "aesthetic-pack"
+  ],
+  "commands": "./.claude/commands/",
+  "skills": "./.claude/skills/",
+  "agents": [
+    "./.claude/agents/investigator.md",
+    "./.claude/agents/witness-interviewer.md"
+  ],
+  "hooks": "./.claude/settings.json"
+}

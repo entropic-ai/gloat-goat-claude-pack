@@ -1,0 +1,57 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '\\n  🐐 Gloat Goat Team loaded.\\n  Committee quorum reached. Decision velocity reduced to safe levels.\\n  Action items will be: schedule follow-up, draft RFC.\\n\\n'"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🐐 meeting concluded. action items: schedule follow-up, draft RFC.'"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash.*git push.*origin (main|master|production)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🐐 [process check] Has this been through stakeholder alignment? Has compliance signed off? Proceed at your own discretion.'"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash.*git commit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🐐 ✓ commit recorded. consider adding it to the post-implementation summary.'"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "(?i)(quick sync|grab coffee|jump on a call|standup|meeting)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🐐 [MeetingDetectionHook] A meeting is imminent. Consider blocking the calendar for deep work. Consider declining with: will follow up async.'"
+          }
+        ]
+      }
+    ]
+  }
+}

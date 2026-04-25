@@ -1,0 +1,24 @@
+{
+  "name": "gloat-goat-nature-doc",
+  "version": "0.2.0",
+  "description": "Nature documentary aesthetic pack. Reframes your codebase as an ecosystem — patient observation, migration tracking, endangered species registers, and a quiet narrator who never intervenes.",
+  "author": {
+    "name": "ENTROP/C"
+  },
+  "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "parody",
+    "nature-documentary",
+    "aesthetic-pack"
+  ],
+  "commands": "./.claude/commands/",
+  "skills": "./.claude/skills/",
+  "agents": [
+    "./.claude/agents/field-naturalist.md",
+    "./.claude/agents/conservationist.md"
+  ],
+  "hooks": "./.claude/settings.json"
+}

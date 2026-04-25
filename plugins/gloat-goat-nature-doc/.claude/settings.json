@@ -1,0 +1,64 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '\\n  [field hide established]\\n  The codebase is observed but undisturbed.\\n  Intervention is discouraged. Documentation is encouraged.\\n\\n'"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🐐 the hide is left as found. the forest does not notice.'"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash.*rm -rf",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🌿 [conservation alert] A removal is in progress. Five minutes — would the conservationist like to be heard first?'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash.*git rm",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🌿 [conservation alert] A species is being removed from the registry. Ensure its edge cases have been preserved.'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash.*(?:deploy|kubectl apply)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🌿 The migration begins. The herd moves at dusk.'"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash.*git commit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🌿 a small change, recorded in the field journal. the ecosystem adjusts.'"
+          }
+        ]
+      }
+    ]
+  }
+}
