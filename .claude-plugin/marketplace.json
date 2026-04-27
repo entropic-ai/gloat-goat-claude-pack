@@ -206,6 +206,26 @@
         "wes-anderson",
         "aesthetic-pack"
       ]
+    },
+    {
+      "name": "gloat-goat-blackhat",
+      "source": "./plugins/gloat-goat-blackhat",
+      "description": "Hacker-archetype parody pack that smuggles a real defensive security audit under a 90s-film-hacker voice. Audits YOUR OWN code: attack surface, hardcoded secrets, dependency risk, CORS footguns, phishing signals, backup hygiene. The bit is theater; the findings are real.",
+      "version": "0.1.0",
+      "author": {
+        "name": "ENTROP/C"
+      },
+      "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+      "license": "MIT",
+      "keywords": [
+        "claude-code",
+        "parody",
+        "security",
+        "security-audit",
+        "owasp",
+        "defensive-security",
+        "expansion-pack"
+      ]
     }
   ]
 }

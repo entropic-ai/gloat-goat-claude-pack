@@ -8,7 +8,7 @@ A parody marketplace of plugins for Claude Code. Install one (or several) and yo
 
 ## What's in this marketplace
 
-12 plugins. One core pack and eleven expansion packs. Each is independently installable.
+13 plugins. One core pack, eleven expansion packs, and one structural outlier (`blackhat`). Each is independently installable.
 
 ```
 .claude-plugin/
@@ -26,7 +26,8 @@ plugins/
 ├── gloat-goat-nature-doc/       # codebase as ecosystem
 ├── gloat-goat-true-crime/       # incidents as podcasts
 ├── gloat-goat-shakespearean/    # theatrical reframing
-└── gloat-goat-wes-anderson/     # symmetrical, deadpan formatting
+├── gloat-goat-wes-anderson/     # symmetrical, deadpan formatting
+└── gloat-goat-blackhat/         # 90s-hacker voice, real security audit underneath
 ```
 
 ### Pack overview
@@ -45,6 +46,7 @@ plugins/
 | **`gloat-goat-true-crime`** | Slow, methodical | `/podcast-episode`, `/cold-case`, `investigator`, `witness-interviewer` |
 | **`gloat-goat-shakespearean`** | Iambic, theatrical | `/soliloquy`, `/five-acts`, `/death-scene`, `dramatic-actor`, `court-jester` |
 | **`gloat-goat-wes-anderson`** | Symmetrical, deadpan | `/commit-anderson`, `/inventory`, `/symmetrical-diff`, `narrator-of-precise-things` |
+| **`gloat-goat-blackhat`** 🕶️ | 90s-film-hacker | `/recon`, `/exploit`, `/ransom`, `/leave-no-trace`, `password-shamer`, `pentest-goat`, `red-team-goat` |
 
 ---
 
@@ -209,6 +211,29 @@ Each aesthetic pack reframes coding as a different genre:
 - **Wes Anderson** — symmetrical commits, precise inventories, mirrored diffs, melancholic curators
 
 All include themed hooks (opening credits, cooking timers, curtain rises, etc.) that fire on session start, commits, and force pushes.
+
+---
+
+### `gloat-goat-blackhat` — the one that's different 🕶️
+
+> *"This pack audits your own code. It is not a tool for attacking systems you do not own."*
+
+Every other pack takes code and gives theater back. `blackhat` takes code and gives **real information** back, dressed as theater. The voice is 90s-film-hacker (*"I'm in"*, green terminal text, Mr. Robot energy). Underneath, it's an OWASP-flavored defensive audit of **your own repo**.
+
+```
+/recon "src/auth"            # real attack-surface dossier, real file:line evidence
+/exploit "POST /api/users"   # descriptive walk-through + a concrete fix (no runnable payload)
+/social-engineer "this repo" # what your public signals leak — pretext analysis, not a sendable email
+/ransom "the database"       # mock ransom note + real backup-and-recovery checklist
+/leave-no-trace              # .gitignore + .env + history audit
+/script-kiddie "this app"    # what a bored 14-year-old with Copilot breaks in 20 minutes
+```
+
+Auto-triggering skills: `password-shamer` (reacts to hardcoded secrets), `dependency-paranoid` (fires on every `npm install` / `pip install`), `cors-suspect` (assumes the worst on every CORS config).
+
+Subagents: `pentest-goat` (expensive-consultant report format), `red-team-goat` (attack trees), `paranoid-goat` (the boring-but-real 20%: rate limiting, logging exposure, cookie flags, error leakage).
+
+**Scope lock**: every command and agent refuses out-of-scope targets. The pack is defensive security in a costume — it does not produce working exploits for systems you don't own. See `docs/roadmap/gloat-goat-blackhat.md` for the ethical framing.
 
 ---
 

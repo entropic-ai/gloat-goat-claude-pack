@@ -1,0 +1,28 @@
+{
+  "name": "gloat-goat-blackhat",
+  "version": "0.1.0",
+  "description": "Hacker-archetype parody pack that smuggles real defensive security audit output under a 90s-film-hacker voice. Audits YOUR OWN code: attack surface, hardcoded secrets, dependency risk, CORS footguns, phishing signals, backup hygiene. The bit is theater; the findings are real.",
+  "author": {
+    "name": "ENTROP/C"
+  },
+  "repository": "https://github.com/entropic-ai/gloat-goat-marketplace",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "parody",
+    "security",
+    "security-audit",
+    "owasp",
+    "defensive-security",
+    "expansion-pack"
+  ],
+  "commands": "./.claude/commands/",
+  "skills": "./.claude/skills/",
+  "agents": [
+    "./.claude/agents/pentest-goat.md",
+    "./.claude/agents/red-team-goat.md",
+    "./.claude/agents/paranoid-goat.md"
+  ],
+  "hooks": "./.claude/settings.json"
+}

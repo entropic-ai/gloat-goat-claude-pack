@@ -1,0 +1,84 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '\\n  [access granted]\\n  the goat is in.\\n  the only system we are breaking into is yours.\\n\\n'"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '[exfil complete] findings saved to your own brain. close the laptop. check your backups.'"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '[sensitive read] the perimeter is a suggestion.' 1>&2"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash.*git push.*main",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '\\033[32m[DEPLOYING TO PRODUCTION]\\033[0m attack surface expanding.\\n'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash.*(npm|yarn|bun|pnpm) (i|install|add)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '[supply chain] a stranger ships you a crate. you open it, because you always open it.'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash.*pip install",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '[supply chain] pypi is a mall. the mall has a loading dock. the loading dock has no cameras.'"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '[footprint] the goat sees your diff. so do they, eventually.'"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "(?i)(TODO:? ?fix security|FIXME:? ?auth|XXX:? ?secret)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '[the goat sees your TODO] so do they.'"
+          }
+        ]
+      }
+    ]
+  }
+}
